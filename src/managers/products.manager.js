@@ -163,7 +163,7 @@ class ProductManager {
     }
 }
 //INSTANCIA DE CLASE
-const productsManager = new ProductManager('../src/files/products.json')
+const productsManager = new ProductManager('../src/files/productos.json')
 
 //EXPORT DEL MANAGER
 export default productsManager

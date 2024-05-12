@@ -147,7 +147,7 @@ class CartManager {
 }
 
 //INSTANCIA DE CLASE
-const cartManager = new CartManager('../src/files/carts.json')
+const cartManager = new CartManager('../src/files/carrito.json')
 
 //EXPORT DEL MANAGER
 export default cartManager
