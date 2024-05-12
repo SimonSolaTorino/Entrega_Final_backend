@@ -1,0 +1,46 @@
+[
+  {
+    "title": "F!NE Beauty",
+    "description": "Sabor tropical mix",
+    "code": "FNBT01",
+    "price": 38500,
+    "status": true,
+    "stock": 45,
+    "category": "colagenos",
+    "thumbnail": [],
+    "id": 1
+  },
+  {
+    "title": "F!NE Power",
+    "description": "Sabor frutos rojos",
+    "code": "FNPW01",
+    "price": 4200,
+    "status": true,
+    "stock": 21,
+    "category": "colagenos",
+    "thumbnail": [],
+    "id": 24
+  },
+  {
+    "title": "F!NE Smooth",
+    "description": "Sabor arandanos",
+    "code": "FNSM01",
+    "price": 4500,
+    "status": true,
+    "stock": 60,
+    "category": "colagenos",
+    "thumbnail": [],
+    "id": 17
+  },
+  {
+    "title": "F!NE Peak",
+    "description": "Sabor tropical cream",
+    "code": "FNPK01",
+    "price": 49500,
+    "status": true,
+    "stock": 75,
+    "category": "colagenos",
+    "thumbnail": [],
+    "id": 19
+  }
+]
