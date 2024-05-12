@@ -6,8 +6,14 @@ const router = Router()
 //traer todos los productos
 router.get('/', async (req, res)=>{
     try{
+        const limite_de_productos = req.query.limit
         const array_productos = await productsManager.traer_productos()
-        res.json(array_productos)
+        if(limite_de_productos && (limite_de_productos <= array_productos.length && limite_de_productos > 0)){
+            const array_limitado = array_productos.slice(0,limite_de_productos)
+            res.json(array_limitado)
+        }else{
+            res.json(array_productos)
+        }
 
     }catch(error){
         console.log('Error en Router products: GET -> traer todos los productos ')
