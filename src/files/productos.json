@@ -7,29 +7,35 @@
     "status": true,
     "stock": 45,
     "category": "colagenos",
-    "thumbnail": [],
+    "thumbnail": [
+      "https://shop.fineglobal.com/admin/images/515_beauty1.png"
+    ],
     "id": 1
   },
   {
     "title": "F!NE Power",
     "description": "Sabor frutos rojos",
     "code": "FNPW01",
-    "price": 4200,
+    "price": 42000,
     "status": true,
     "stock": 21,
     "category": "colagenos",
-    "thumbnail": [],
+    "thumbnail": [
+      "https://shop.fineglobal.com/admin/images/511_power1.png"
+    ],
     "id": 24
   },
   {
     "title": "F!NE Smooth",
     "description": "Sabor arandanos",
     "code": "FNSM01",
-    "price": 4500,
+    "price": 45000,
     "status": true,
     "stock": 60,
     "category": "colagenos",
-    "thumbnail": [],
+    "thumbnail": [
+      "https://shop.fineglobal.com/admin/images/565_513_smooth%201.png"
+    ],
     "id": 17
   },
   {
@@ -40,7 +46,8 @@
     "status": true,
     "stock": 75,
     "category": "colagenos",
-    "thumbnail": [],
+    "thumbnail": [
+      "https://shop.fineglobal.com/admin/images/564_peak1.png" ],
     "id": 19
   }
 ]

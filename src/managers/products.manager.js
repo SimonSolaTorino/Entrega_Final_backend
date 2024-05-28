@@ -86,6 +86,7 @@ class ProductManager {
                 fs.writeFileSync(this.path, JSON.stringify(productos_actualizados, null, 2))
                 console.log(`El producto con id ${id_prod} se a eliminado correctamente y la DB a sido actualizada.`)
             }else{
+                console.log(typeof id_prod)
                 console.log(`ERROR! En el metodo "eliminar_prooducto()" de la clase ProductManager no se encontro ningun producto con el id: ${id_prod}.`)
             }
             return producto
@@ -115,7 +116,7 @@ class ProductManager {
             status: producto_parametro.status || true,
             stock: producto_parametro.stock || 0,
             category: producto_parametro.category + '' || 'sin categoria',
-            thumbnail: producto_parametro.thumbnail || []
+            thumbnail: [producto_parametro.thumbnail] || []
         }
         const id_unico = this.crear_id_unico()
         if(id_unico !== undefined){
