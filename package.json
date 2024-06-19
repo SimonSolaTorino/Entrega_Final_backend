@@ -1,5 +1,5 @@
 {
-  "name": "pre-entrega1",
+  "name": "entrega-final",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
+    "mongoose": "^8.4.1",
+    "mongoose-paginate-v2": "^1.8.2",
     "socket.io": "^4.7.5"
   }
 }

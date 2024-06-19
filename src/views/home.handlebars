@@ -1,5 +1,6 @@
 <div>
-    <h1>Lista de Productos</h1>
+    <h1>BIENVENIDOS!</h1>
+    <h2 style="text-align: center">Entrega final del curso de CoderHouse de Backend I</h2>
     <div class="container">
     {{#each products}}
     <div class="card">
@@ -9,6 +10,7 @@
             <p class="card-price">${{this.price}}</p>
             <p class="card-stock">Stock: {{this.stock}}</p>
             <p class="card-text">{{this.description}}</p>
+            <div class="elementos-ocultos">{{this._id}}</div>
         </div>
     </div>
     {{/each}}

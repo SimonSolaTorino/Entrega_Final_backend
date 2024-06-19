@@ -47,7 +47,60 @@
     "stock": 75,
     "category": "colagenos",
     "thumbnail": [
-      "https://shop.fineglobal.com/admin/images/564_peak1.png" ],
+      "https://shop.fineglobal.com/admin/images/564_peak1.png"
+    ],
     "id": 19
+  },
+  {
+    "title": "F!NE Sculpt",
+    "description": "Sabor coco",
+    "code": "FNSC01",
+    "price": 64000,
+    "status": true,
+    "stock": 12,
+    "category": "proteinas",
+    "thumbnail": [
+      "https://d3kzuvdaj0u3t3.cloudfront.net/producto/360/128-01.jpeg"
+    ],
+    "id": 3
+  },
+  {
+    "title": "F!NE Switch",
+    "description": "Sabor avellanas",
+    "code": "FNSW01",
+    "price": 64000,
+    "status": true,
+    "stock": 12,
+    "category": "proteinas",
+    "thumbnail": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFWR_6N4LRXtCoBIo0hT7ntK4lHY6Dfnl9ew&s"
+    ],
+    "id": 12
+  },
+  {
+    "title": "F!NE Fit",
+    "description": "sabor vainilla",
+    "code": "FNFT01",
+    "price": 64000,
+    "status": true,
+    "stock": 12,
+    "category": "proteinas",
+    "thumbnail": [
+      "https://dcdn.mitiendanube.com/stores/001/616/465/products/fit-11-08929a820d632ab75816354717396751-640-0.png"
+    ],
+    "id": 4
+  },
+  {
+    "title": "F!NE Strong",
+    "description": "Sabor frutilla",
+    "code": "FNST01",
+    "price": 64000,
+    "status": true,
+    "stock": 12,
+    "category": "proteinas",
+    "thumbnail": [
+      "https://d3kzuvdaj0u3t3.cloudfront.net/producto/360/130-01.jpeg"
+    ],
+    "id": 8
   }
 ]

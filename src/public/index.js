@@ -2,12 +2,13 @@ const socket = io()
 //RECEPCION Y EMICION DE SOCKETS
 /*traer productos y mostrarlos*/
 socket.on('productos', (productos_DB)=>{
+
     const productos_container = document.querySelector('.product-container')
     productos_container.innerHTML = ''; // para dejarlo limpio
     productos_DB.forEach(producto => {
         const nuevo_div = document.createElement('div')
         nuevo_div.classList.add('product-row')
-        nuevo_div.setAttribute('data-id', producto.id)
+        nuevo_div.setAttribute('data-id', producto._id)
         nuevo_div.innerHTML = `
             <div class="product-image">
                 <img src="${producto.thumbnail.length > 0 ? producto.thumbnail[0] : 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'}" alt="imagen-realtimeproducts">
@@ -17,6 +18,7 @@ socket.on('productos', (productos_DB)=>{
                 <p class="realtime-price">$${producto.price}</p>
                 <p class="realtime-stock">Stock: ${producto.stock}</p>
                 <p class="realtime-text">${producto.description}</p>
+                <p class="realtime-text" style="display: none" value=${producto._id}>${producto._id}</p>
             </div>
             <div class="product-action">
                 <button class="delete-btn">X</button>
@@ -30,7 +32,7 @@ socket.on('nuevoProducto', (producto) => {
     const productos_container = document.querySelector('.product-container')
     const nuevo_div = document.createElement('div')
     nuevo_div.classList.add('product-row')
-    nuevo_div.setAttribute('data-id', producto.id)
+    nuevo_div.setAttribute('data-id', producto)
     nuevo_div.innerHTML = `
         <div class="product-image">
             <img src="${producto.thumbnail.length > 0 ? producto.thumbnail[0] : 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'}" alt="imagen-realtimeproducts">
@@ -49,6 +51,7 @@ socket.on('nuevoProducto', (producto) => {
 })
 /*eliminar un producto del dom*/
 socket.on('producto_eliminado', (id_prod) => {
+    console.log(id_prod)
     const producto_row = document.querySelector(`.product-row[data-id="${id_prod}"]`)
     if (producto_row) {
         producto_row.remove()
@@ -75,8 +78,8 @@ const sweetalert_agregar = async () => {
             const title = Swal.getPopup().querySelector('#title').value
             const description = Swal.getPopup().querySelector('#description').value
             const code = Swal.getPopup().querySelector('#code').value
-            const price = Swal.getPopup().querySelector('#price').value
-            const stock = Swal.getPopup().querySelector('#stock').value
+            const price = parseInt(Swal.getPopup().querySelector('#price').value)
+            const stock = parseInt(Swal.getPopup().querySelector('#stock').value)
             const category = Swal.getPopup().querySelector('#category').value
             const thumbnail = Swal.getPopup().querySelector('#thumbnail').value
             return {
@@ -113,6 +116,7 @@ document.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-btn')) {
         const producto_row = event.target.closest('.product-row')
         const id_prod = producto_row.getAttribute('data-id')
+        console.log(id_prod)
         socket.emit('eliminar_producto', id_prod)
     }
 })
