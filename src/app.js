@@ -12,7 +12,7 @@ import product_model from './DAO/models/products.model.js';
 //CONSTANTES
 const PORT = 8080
 const app = express()
-const connection_string = 'mongodb+srv://simonsolat:simonsolat@cluster0.cjjajx4.mongodb.net/'
+const connection_string = '' //'mongodb+srv://simonsolat:simonsolat@cluster0.cjjajx4.mongodb.net/'
 
 //EXPRESS
 app.use(express.json())
@@ -32,7 +32,7 @@ app.use('/api/carts', cartRouter)
 //ruta views
 app.use('/', viewRouter)
 //MONGOOS
-mongoose.connect(connection_string, {dbName: 'Entrega_Final'})
+mongoose.connect(connection_string/*,{dbName: 'Entrega_Final'}*/)
 
 //INICIAMOS SERVER SOCKET
 const http_server = app.listen(PORT, ()=>console.log(`Escuchando el puerto ${PORT} correctamente.`))
